@@ -15,7 +15,6 @@ nav {
 
 header {
     background-color: $cBgDeep;
-
     height: scut-rem(590);
     @media #{$medium-only} { height: scut-rem(500); }
     @media #{$small-only}  { height: scut-rem(320); }
@@ -64,7 +63,7 @@ header {
 
 article {
     height: auto;
-    padding-top: 6rem;
+    padding-top: 7rem;
     z-index: 1000;
 
     @media #{$small-only} {
@@ -146,7 +145,7 @@ article {
    ------------------------------------------------------------------ */
 
 #scroll-arrow {
-    // position: fixed;
+    position: absolute;
     width: 100%;
     text-align: center;
     padding: 0;
@@ -155,13 +154,9 @@ article {
     a {
         display: block;
         margin: 0;
-        padding: 2rem 0 4rem;
+        padding-top: 2rem;
         text-align: center;
         text-decoration: none;
-
-        @media #{$small-only} {
-            padding: 2rem 0 2rem;
-        }
     }
 
     h3 {
@@ -190,6 +185,14 @@ article {
         opacity: 1;
         transition: all 0.3s ease-out;
     }
+}
+
+/**
+ * Move article container away from #scroll-arrow a.link
+ */
+
+#scroll-start {
+    padding-top: 3rem;
 }
 
 

@@ -1,16 +1,18 @@
 Vincentia Treehouse
 ===================
 
-A marketing &amp; info one-pager made using Harp JS. 
+A marketing & info one-pager made using Harp JS. 
 
 ### TO DO
-- deploy
-- magellan accuracy
+- magellan: http://jsfiddle.net/awshout/FF2eR/
 - iOS Safari top bar meta hide shit?
+- interaction ncieness on scroll: http://pages.github.com/
 
 ### DEPLOY
 - autoprefixer w/ sublime plugin before deploy
-- turn on maps iframe
+- harp's complete bullshit gh-pages docs… https://gist.github.com/chrisjacob/833223
+- http://nicolasgallagher.com/git-checkout-specific-files-from-another-branch/
+- add custom url: http://pages.github.com/
 
 ### LATER
 - google map locations

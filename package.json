@@ -1,0 +1,12 @@
+{
+  "name": "vincentia-treehouse",
+  "version": "0.1.0",
+  "description": "A marketing & info one-pager made using Harp JS, live on Heroku",
+  "dependencies": {
+    "harp": "*"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}

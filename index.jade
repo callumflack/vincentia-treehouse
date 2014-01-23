@@ -4,15 +4,13 @@ header#home
     .headline-position("data-0"="opacity:1", "data-500"="opacity:0")
         .headline
             .container
-                .row
-                    .column
-                        h1.title(style='white-space:pre;')
-                            | Treehouse
-                            | at Vincentia
-                        .rule
-                        h2.subtitle A retreat in Jervis Bay, New South Wales.
-                        p
-                            a.Button.Button--contact(href='http://www.stayz.com.au/98466') Bookings
+                h1.title(style='white-space:pre;')
+                    | Treehouse
+                    | at Vincentia
+                .rule
+                h2.subtitle A retreat in Jervis Bay, New South Wales.
+                p
+                    a.Button.Button--contact(href='http://www.stayz.com.au/98466') Bookings
 
 nav("data-0"="border-bottom:1px solid rgba(85,85,85,1)", "data-500"="border-bottom:1px solid rgba(85,85,85,0)")
     div(data-magellan-expedition='fixed')
@@ -33,15 +31,15 @@ nav("data-0"="border-bottom:1px solid rgba(85,85,85,1)", "data-500"="border-bott
                 dd(data-magellan-arrival='bookings')
                     a(href='##bookings|500', "data-0"="color:rgb(170,170,170)", "data-500"="color:rgb(43,166,203)") Bookings
 
-section("data-0"="background:rgb(50,57,64)", "data-400"="background:rgb(245,245,245)")
+section#skrollr-body("data-0"="background:rgb(50,57,64)", "data-400"="background:rgb(245,245,245)")
     article#scroll-arrow("data-0"="opacity:1", "data-300"="opacity:0")
-        a(href='#.scroll-about|200')
+        a(href='##scroll-start|500')
             h3 Scroll
             img(src='/images/scroll-arrow.png')
 
-    .container("data-200"="opacity:0", "data-400"="opacity:1")
+    .container#scroll-start("data-200"="opacity:0", "data-400"="opacity:1")
 
-        article#about.scroll-about(data-magellan-destination='about')
+        article#about(data-magellan-destination='about')
             != partial("_about")
 
         article#location(data-magellan-destination='location')
@@ -52,7 +50,7 @@ section("data-0"="background:rgb(50,57,64)", "data-400"="background:rgb(245,245,
                     p
                         | Just 2.5 hours south of Sydney, Jervis Bay boasts the whitest sand in Australia. It has many sanctuary sites, beach reserves and national parks.
                     p.map
-                        //- iframe(frameborder='0', height='520', src='https://mapsengine.google.com/map/embed?mid=z-R5RJp1Q6EU.kTG6PN_cTcNA', width='100%')
+                        iframe(frameborder='0', height='460', src='https://mapsengine.google.com/map/embed?mid=z-R5RJp1Q6EU.kTG6PN_cTcNA', width='100%')
 
         article#pictures(data-magellan-destination='pictures')
             != partial("_pictures")
