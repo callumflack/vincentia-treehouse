@@ -3,22 +3,18 @@ Vincentia Treehouse
 
 A marketing &amp; info one-pager made using Harp JS. 
 
-
-To Do
--------------------
-
-# TO DO
+### TO DO
 - deploy
 - magellan: include left .column headline in viewport on active
 - iOS Safari top bar meta hide shit?
 
-# DEPLOY
+### DEPLOY
 - autoprefixer w/ sublime plugin before deploy
 
-# LATER
+### LATER
 - google map locations
 - house floor plan images
 - harp cms @silentrob?
 
-# REF
+### REF
 - https://github.com/briangonzalez/jquery.arbitrary-anchor.js
