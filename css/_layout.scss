@@ -1,0 +1,207 @@
+
+/* ==================================================================
+
+   LAYOUT
+
+   ================================================================== */
+
+header,
+section,
+nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: $cBgDeep;
+
+    height: scut-rem(590);
+    @media #{$medium-only} { height: scut-rem(500); }
+    @media #{$small-only}  { height: scut-rem(320); }
+
+    /**
+     * Fixed cover image
+     */
+
+    .CoverImage-position {
+        @extend %Overlay;
+        position: fixed;
+    }
+
+    .CoverImage--header {
+        @extend %CoverImage;
+        background-image: url(/images/home.jpg);
+
+        max-height: scut-rem(590);
+        @media #{$medium-only} { max-height: scut-rem(500); }
+        @media #{$small-only} { max-height: scut-rem(320); }
+    }
+
+    .FlexEmbed--ratio:before {
+        padding-bottom: 56.25%;
+        @media #{$medium-only} { padding-bottom: 78%; }
+        @media #{$small-only}  { padding-bottom: 85%; }
+    }
+
+    /**
+     * Fixed cover headline
+     */
+
+    .headline-position {
+        @extend %Overlay;
+        padding-top: scut-rem(240);
+        @media #{$medium-only} { padding-top: scut-rem(190); }
+        @media #{$small-only}  { padding-top: scut-rem(110); }
+    }
+
+    .headline {
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+}
+
+article {
+    height: auto;
+    padding-top: 6rem;
+    z-index: 1000;
+
+    @media #{$small-only} {
+        padding-top: 3rem;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media #{$medium-up} {
+        padding: 0 3rem;
+    }
+
+    @media #{$large-up} {
+        width: $container-width;
+        padding: 0;
+    }
+}
+
+
+
+/* Section rules
+   ------------------------------------------------------------------ */
+
+%column-rule { border-top: 1px solid darken($cBg,15%); }
+
+.column > h3 {
+    @extend %column-rule;
+    padding-top: 9px;
+    margin-top: 0;
+}
+
+.column > p:first-of-type {
+    @extend %column-rule;
+    padding-top: 8px;
+
+    @media #{$small-only} {
+        border: 0;
+        padding-top: 0;
+    }
+}
+
+#home,
+#colophon {
+     .column > p {
+        border: 0;
+    }
+}
+
+.column > p + p {
+    padding-top: 0;
+    border: 0;
+}
+
+/**
+ * No rule when h4 is a first paragraph
+ */
+
+#pictures,
+#thingstodo {
+    .column {
+        > p:first-of-type {
+            padding-top: 0;
+            border-top: 0;
+        }
+
+        > h4:first-of-type {
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+/* Scroll arrow
+   ------------------------------------------------------------------ */
+
+#scroll-arrow {
+    // position: fixed;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    a {
+        display: block;
+        margin: 0;
+        padding: 2rem 0 4rem;
+        text-align: center;
+        text-decoration: none;
+
+        @media #{$small-only} {
+            padding: 2rem 0 2rem;
+        }
+    }
+
+    h3 {
+        margin: 0 auto 0.25rem;
+        font-family: join($fontMed, $body-font-family);
+        text-align: center;
+        color: lighten($cText,40%);
+        letter-spacing: 0;
+        opacity: 0;
+
+        @include scut-rem-fallback(15);
+        @media #{$medium-only} { @include scut-rem-fallback(15); }
+        @media #{$small-only}  {
+            @include scut-rem-fallback(15);
+            opacity: 1;
+        }
+
+    }
+
+    img {
+        // margin-right: 0.5rem;
+        margin: 0 auto;
+    }
+
+    &:hover h3 {
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+}
+
+
+
+/* Colophon spacing
+   ------------------------------------------------------------------ */
+
+#colophon {
+    margin-bottom: 4rem;
+    @media #{$small-only} {
+        margin-bottom: 2rem;
+    }
+}
+
+

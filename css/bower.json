@@ -1,0 +1,27 @@
+{
+  "name": "css dependencies",
+  "version": "0.0.1",
+  "authors": [
+    "Callum Flack <callumflack@gmail.com>"
+  ],
+  "description": "css dependencies",
+  "keywords": [
+    "suit",
+    "scut",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "callumflack.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "scut": "~0.7.2",
+    "suit-button": "~3.0.0",
+    "suit-flex-embed": "~1.4.0"
+  }
+}

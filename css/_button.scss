@@ -1,0 +1,57 @@
+
+/* ==========================================================================
+
+   BUTTON MODIFIERS
+
+   ========================================================================== */
+
+.Button {
+    display: inline-block;
+    width: auto;
+}
+
+.Button--full {
+    display: block;
+    width: 100%;
+}
+
+.Button--contact {
+    padding: .8rem 2rem;
+    margin: 0 auto;
+    border-radius: 3px;
+    border-color: white;
+    border-width: 1px;
+    background-color: $cBlue;
+
+    font-family: join($fontMed, $body-font-family);
+    @include scut-rem-fallback(24);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    // text-shadow: 0 1px 0px rgba(0,0,0,1);
+
+    &:hover {
+        background-color: darken($cBlue, 15%);
+        color: white;
+    }
+
+    @media #{$small-only} {
+        margin-top: 5px;
+        @include scut-rem-fallback(18);
+    }
+}
+
+.Button--highlight {
+    padding: 1.5rem 6rem;
+    border-width: 0;
+    margin: 1rem 0;
+
+    @media #{$small-only} {
+        width: 100%;
+        padding: 1.5rem 0;
+
+    }
+}
+

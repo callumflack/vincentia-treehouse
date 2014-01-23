@@ -1,0 +1,124 @@
+/* ==========================================================================
+
+   SETTINGS
+
+   ========================================================================== */
+
+/* Sizes
+   -------------------------------------------------------------------------- */
+
+$base-font-size: 16px;    //figure out as 100% via base rem?
+$base-line-height: 24px;  //figure out as 1.4 via strip unit?
+$base-rem: scut-rem(16);  //or 24
+$container-width: scut-rem(900);
+
+
+/* Fonts
+   -------------------------------------------------------------------------- */
+
+@include scut-font-face('ars_maquettetrblack', '/fonts/arsmaqblatr-webfont');
+@include scut-font-face('ars_maquettetrbold', '/fonts/arsmaqboltr-webfont');
+@include scut-font-face('ars_maquettetrmedium', '/fonts/arsmaqmedtr-webfont');
+@include scut-font-face('ars_maquettetrregular', '/fonts/arsmaqregtr-webfont');
+@include scut-font-face('ars_maquettetrlight', '/fonts/arsmaqligtr-webfont');
+
+$font:      'ars_maquettetrregular';
+$fontLight: 'ars_maquettetrlight';
+$fontMed:   'ars_maquettetrmedium';
+$fontBold:  'ars_maquettetrbold';
+$fontBlack: 'ars_maquettetrblack';
+
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+
+/* Colours
+   -------------------------------------------------------------------------- */
+
+$cText: #444;
+$cText50: #999;
+$cText20: #aaa;
+$cLink: #111;
+$cRed: #cc0000;
+$cBlueDeep: rgb(13,39,65);
+$cBlue: #2ba6cb;
+$cBlackout: rgb(33,42,61);
+$cBg: rgb(245,245,245);
+$cBgDeep: rgb(50,57,64);
+
+
+/* MQ breakpoints
+   -------------------------------------------------------------------------- */
+
+/**
+ * easy media queries
+ * @include bp(tablet) { SCSS here };
+ * http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+ * http://css-tricks.com/resolution-specific-stylesheets/
+ * http://css-tricks.com/css-media-queries/
+ * See also: foundation/bootstrap/inuit
+ */
+
+@mixin bp($point) {
+    @if $point == desk {
+        @media (min-width: 1200px) { @content; }
+    }
+    @if $point == tablet {
+        @media (min-width: 641px) and (max-width: 1199px) { @content; }
+    }
+    @if $point == palm {
+        @media (max-width: 640px) { @content; }
+    }
+    @else if $point == osx {
+        @media (max-width: 400px) { @content; } //set this to 320 upon pushing live
+    }
+}
+
+
+/* Foundation 5 MQ breakpoints
+   -------------------------------------------------------------------------- */
+
+// Upper & lower unit functions
+@function lower-bound($range){
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range,1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range,2);
+}
+
+// Media Query Ranges
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em);
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+
+
+

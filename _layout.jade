@@ -1,0 +1,17 @@
+!!! 5
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(content="width=device-width, initial-scale=1", name="viewport")
+        title
+            | Treehouse Vincentia. A retreat holiday house available to rent in Jervis Bay, New South Wales.
+        link(href="css/main.css", rel="stylesheet")
+        script(src="js/modernizr.js")
+
+    body("data-0"="background:rgb(50,57,64)", "data-500"="background:rgb(245,245,245)")
+        != yield
+        script(src='js/jquery.js')
+        script(src='js/foundation.min.js')
+        script(src='js/jquery.arbitrary-anchor.js')
+        script(src='js/application.js')
+        script(src='js/skrollr.min.js')

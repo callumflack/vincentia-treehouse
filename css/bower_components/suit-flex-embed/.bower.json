@@ -1,0 +1,31 @@
+{
+  "name": "suit-flex-embed",
+  "version": "1.4.0",
+  "author": "Nicolas Gallagher",
+  "main": "flex-embed.css",
+  "devDependencies": {
+    "suit-test": "*"
+  },
+  "ignore": [
+    "build",
+    "components",
+    "test",
+    ".*",
+    "Makefile",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "homepage": "https://github.com/suitcss/flex-embed",
+  "_release": "1.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.4.0",
+    "commit": "28a6b4952b705db2f0df7e9e63e48fbeee89eb29"
+  },
+  "_source": "git://github.com/suitcss/flex-embed.git",
+  "_target": "~1.4.0",
+  "_originalSource": "suit-flex-embed",
+  "_direct": true
+}

@@ -1,0 +1,48 @@
+/* ==================================================================
+
+   GALLERY: override Foundation Clearing styles
+
+   ================================================================== */
+
+/**
+ * Weird Foundation clash when using clearing lightbox with block grid
+ */
+
+[data-clearing] li { margin: 0; }
+
+[class*="block-grid-"] > li {
+    padding-bottom: 0.625rem;
+}
+
+
+/* Blackout
+   ------------------------------------------------------------------ */
+
+.clearing-blackout,
+.clearing-assembled .clearing-container .visible-img,
+.clearing-assembled .clearing-container .carousel,
+.clearing-caption {
+    background: darken($cText,10%);
+}
+
+.clearing-blackout .carousel {
+    padding: 2rem 6rem 0;
+    border-top: 1px solid darken($cText,10%);
+}
+
+.clearing-assembled .clearing-container .carousel > ul li {
+    margin-right: .5rem;
+    &:last-of-type { margin-right: 0; }
+}
+
+.clearing-close { text-decoration: none; }
+
+/**
+ * Inline block-grid images when in blackout mode
+ */
+
+.clearing-blackout {
+    .small-block-grid-2 > li:nth-of-type(2n+1)  { clear: none; }
+    .medium-block-grid-4 > li:nth-of-type(4n+1) { clear: none; }
+    .large-block-grid-3 > li:nth-of-type(3n+1)  { clear: none; }
+}

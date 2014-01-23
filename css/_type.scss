@@ -1,0 +1,244 @@
+
+/* ==================================================================
+
+   TYPOGRAPHY
+
+   ================================================================== */
+
+/* p, a & lists
+   ------------------------------------------------------------------ */
+
+$textMargin: 0 0 .75rem 0;
+
+%text {
+    font-family: join($font, $body-font-family);
+    @include scut-rem-fallback(17);
+    line-height: 1.4;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: $cText;
+    margin: $textMargin;
+
+    @media #{$small-only} {
+        @include scut-rem-fallback(16);
+    }
+}
+
+
+p, a, li, span { @extend %text; }
+
+ul { margin: $textMargin; }
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+        // color: darken($cBlue, 25%);
+        color: $cLink;
+        text-decoration: none;
+    }
+
+    img { border: none; }
+}
+
+/**
+ * Styling markdown paragraphs
+ */
+
+ p,
+ li {
+    em {
+        font-family: join($fontBold, $body-font-family);
+        @include scut-rem-fallback(16);
+        font-style: normal;
+        // letter-spacing: 1px;
+    }
+ }
+
+/**
+ * Paragraph lists
+ */
+
+li {
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+
+
+
+/* Headlines
+   ------------------------------------------------------------------ */
+
+@for $index from 1 through 6 {
+    h#{$index} {
+        @extend %text;
+        font-family: join($fontBold, $body-font-family);
+        @include scut-rem-fallback(16);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        @media #{$small-only} {
+            @include scut-rem-fallback(15);
+        }
+    }
+}
+
+$shadow: 0 0 0px rgba(0, 0, 0, 1);
+$headline-border: 3px solid $cText;
+
+h1 {
+    font-family: $fontLight;
+    @include scut-rem-fallback(60);
+    line-height: 0.9;
+
+    &.title {
+        font-family: join($fontMed, $body-font-family);
+        @include scut-rem-fallback(80);
+        letter-spacing: 4px;
+        text-align: center;
+        color: white;
+        text-shadow: $shadow;
+
+        @media #{$medium-only} { @include scut-rem-fallback(60); }
+        @media #{$small-only}  { @include scut-rem-fallback(36); }
+    }
+}
+
+h2 {
+    font-family: join($fontBold, $body-font-family);
+    @include scut-rem-fallback(30);
+    text-align: center;
+    color: white;
+    margin-bottom: .25rem;
+
+    &.subtitle,
+    &.location {
+        text-shadow: $shadow;
+        letter-spacing: 0;
+    }
+
+    &.subtitle {
+        text-transform: none;
+        @media #{$medium-only} { @include scut-rem-fallback(24); }
+        @media #{$small-only}  { @include scut-rem-fallback(15); }
+    }
+
+    &.location {
+        font-family: join($fontBold, $body-font-family);
+        @include scut-rem-fallback(18);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+h3 {
+    margin-top: 3px;
+    margin-bottom: 1rem;
+
+    @include scut-rem-fallback(13);
+    letter-spacing: 0;
+
+    @media #{$large-up} {
+        @include scut-rem-fallback(15);
+        letter-spacing: 1px;
+    }
+
+    @media #{$small-only} {
+        @include scut-rem-fallback(24);
+        line-height: .8;
+    }
+}
+
+h4 {
+    font-family: join($fontBold, $body-font-family);
+    @include scut-rem-fallback(15);
+    text-transform: none;
+    letter-spacing: 0;
+
+    margin-top: 2rem;
+    margin-bottom: .75rem;
+    padding: 4px 8px;
+    border-bottom: 1px solid darken($cBg,30%);
+    background-color: lighten(#bfcfd8,5%);
+}
+
+h6 {
+    @include scut-rem-fallback(14);
+}
+
+
+/* Header
+   ------------------------------------------------------------------ */
+
+.headline {
+    p {
+        padding-top: 1.25rem;
+        text-align: center;
+    }
+}
+
+.rule {
+    width: 100%;
+    height: scut-rem(7);
+    margin: 0.9rem 0 1.5rem;
+    background-color: white;
+    box-shadow: $shadow;
+
+    @media #{$small-only} {
+        height: scut-rem(4);
+        margin-bottom: 0.9rem;
+    }
+
+    &.dark { background-color: $cText; }
+}
+
+
+
+/* Activity links
+   ------------------------------------------------------------------ */
+
+.list p {
+
+    span,
+    span a {
+        font-family: join($fontBold, $body-font-family);
+    }
+}
+
+
+
+/* Colophon
+   ------------------------------------------------------------------ */
+
+#colophon {
+
+    p, p a {
+        @include scut-rem-fallback(13);
+        text-align: center;
+    }
+
+    p { margin-bottom: 0; }
+}
+
+
+
+/* Booking button
+   ------------------------------------------------------------------ */
+
+.buttonholder {
+    text-align: center;
+    @media #{$large-up} { text-align: left; }
+}
+
+
+
+
+

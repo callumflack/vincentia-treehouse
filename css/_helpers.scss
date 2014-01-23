@@ -1,0 +1,64 @@
+
+/* ==================================================================   
+   
+   HELPERS
+   
+   ================================================================== */
+
+/**
+ * Overlay a div exactly
+ */
+
+%Overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/**
+ * Cover image
+ * http://nicolasgallagher.com/flexible-css-cover-images/
+ * Requires: https://github.com/suitcss/flex-embed
+ * Overwrite max height & width as required
+ */
+
+%CoverImage {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    margin: 0 auto;
+    max-height: scut-rem(620);
+    max-width: 100%;
+}
+
+/**
+ * Simple breakpoint hides
+ */
+
+// @media (min-width: $screen-md-min) { .hide-desk   { display: none; } }  
+// @media (min-width: $screen-sm-min) { .hide-tablet { display: none; } }
+// @media (max-width: $screen-xs-max) { .hide-mobile { display: none; } }
+
+/**
+ * Center
+ */
+
+a.center-link { 
+    display: block;
+    padding-bottom: 10px; 
+    text-align: center !important;
+}
+
+img.center-img {
+    margin: 0 auto;
+}
+
+/**
+ * Suit spacer revisions
+ */
+
+.u-marginTl { margin-top: 60px !important; }
+.u-marginTm { margin-top: 40px !important; }

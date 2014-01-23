@@ -1,0 +1,25 @@
+/* ==================================================================   
+   
+   GOOGLE MAP IFRAME
+   
+   ================================================================== */
+
+p.map iframe {
+    // border: 0;
+    padding-top: 1rem;
+}
+
+.fluid-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.fluid-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
