@@ -5,6 +5,8 @@
 
    ================================================================== */
 
+#skrollr-body { border-top: 1px solid green; }
+
 header,
 section,
 nav {
@@ -51,7 +53,7 @@ header {
         @extend %Overlay;
         padding-top: scut-rem(240);
         @media #{$medium-only} { padding-top: scut-rem(190); }
-        @media #{$small-only}  { padding-top: scut-rem(110); }
+        @media #{$small-only}  { padding-top: scut-rem(85); }
     }
 
     .headline {
@@ -86,10 +88,6 @@ article {
     }
 }
 
-
-
-
-#skrollr-body { border-top: 1px solid green; }
 
 
 

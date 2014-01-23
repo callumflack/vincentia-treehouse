@@ -128,7 +128,7 @@ h2 {
     &.subtitle {
         text-transform: none;
         @media #{$medium-only} { @include scut-rem-fallback(24); }
-        @media #{$small-only}  { @include scut-rem-fallback(15); }
+        @media #{$small-only}  { @include scut-rem-fallback(13); }
     }
 
     &.location {
@@ -182,6 +182,10 @@ h6 {
     p {
         padding-top: 1.25rem;
         text-align: center;
+
+        @media #{$small-only} {
+            padding-top: .3125rem;
+        }
     }
 }
 
