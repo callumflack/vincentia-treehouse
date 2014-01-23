@@ -12,81 +12,83 @@ header#home
                 p
                     a.Button.Button--contact(href='http://www.stayz.com.au/98466') Bookings
 
-nav("data-0"="border-bottom:1px solid rgba(85,85,85,1)", "data-500"="border-bottom:1px solid rgba(85,85,85,0)")
-    div(data-magellan-expedition='fixed')
-        .container
-            dl.sub-nav
-                dd
-                    a(href='##home|500') Home
-                dd(data-magellan-arrival='about')
-                    a(href='##about|500') About
-                dd(data-magellan-arrival='location')
-                    a(href='##location|500') Location
-                dd(data-magellan-arrival='pictures')
-                    a(href='##pictures|500') Pictures
-                dd(data-magellan-arrival='thingstodo')
-                    a(href='##thingstodo|500') Nearby
-                dd(data-magellan-arrival='inside')
-                    a(href='##inside|500') Inside
-                dd(data-magellan-arrival='bookings')
-                    a(href='##bookings|500', "data-0"="color:rgb(170,170,170)", "data-500"="color:rgb(43,166,203)") Bookings
+#skrollr-body
 
-section#skrollr-body("data-0"="background:rgb(50,57,64)", "data-400"="background:rgb(245,245,245)")
-    article#scroll-arrow("data-0"="opacity:1", "data-300"="opacity:0")
-        a(href='##scroll-start|500')
-            h3 Scroll
-            img(src='/images/scroll-arrow.png')
+    nav("data-0"="border-bottom:1px solid rgba(85,85,85,1)", "data-500"="border-bottom:1px solid rgba(85,85,85,0)")
+        div(data-magellan-expedition='fixed')
+            .container
+                dl.sub-nav
+                    dd
+                        a(href='##home|500') Home
+                    dd(data-magellan-arrival='about')
+                        a(href='##about|500') About
+                    dd(data-magellan-arrival='location')
+                        a(href='##location|500') Location
+                    dd(data-magellan-arrival='pictures')
+                        a(href='##pictures|500') Pictures
+                    dd(data-magellan-arrival='thingstodo')
+                        a(href='##thingstodo|500') Nearby
+                    dd(data-magellan-arrival='inside')
+                        a(href='##inside|500') Inside
+                    dd(data-magellan-arrival='bookings')
+                        a(href='##bookings|500', "data-0"="color:rgb(170,170,170)", "data-500"="color:rgb(43,166,203)") Bookings
 
-    .container#scroll-start("data-200"="opacity:0", "data-400"="opacity:1")
+    section("data-0"="background:rgb(50,57,64)", "data-400"="background:rgb(245,245,245)")
+        article#scroll-arrow("data-0"="opacity:1", "data-300"="opacity:0")
+            a(href='##scroll-start|500')
+                h3 Scroll
+                img(src='/images/scroll-arrow.png')
 
-        article#about(data-magellan-destination='about')
-            != partial("_about")
+        .container#scroll-start("data-200"="opacity:0", "data-400"="opacity:1")
 
-        article#location(data-magellan-destination='location')
-            .row
-                .large-4.column
-                    h3 Location
-                .large-8.column
-                    p
-                        | Just 2.5 hours south of Sydney, Jervis Bay boasts the whitest sand in Australia. It has many sanctuary sites, beach reserves and national parks.
-                    p.map
-                        iframe(frameborder='0', height='460', src='https://mapsengine.google.com/map/embed?mid=z-R5RJp1Q6EU.kTG6PN_cTcNA', width='100%')
+            article#about(data-magellan-destination='about')
+                != partial("_about")
 
-        article#pictures(data-magellan-destination='pictures')
-            != partial("_pictures")
+            article#location(data-magellan-destination='location')
+                .row
+                    .large-4.column
+                        h3 Location
+                    .large-8.column
+                        p
+                            | Just 2.5 hours south of Sydney, Jervis Bay boasts the whitest sand in Australia. It has many sanctuary sites, beach reserves and national parks.
+                        p.map
+                            iframe(frameborder='0', height='460', src='https://mapsengine.google.com/map/embed?mid=z-R5RJp1Q6EU.kTG6PN_cTcNA', width='100%')
 
-        article#thingstodo(data-magellan-destination='thingstodo')
-            != partial("_nearby")
+            article#pictures(data-magellan-destination='pictures')
+                != partial("_pictures")
 
-        article#inside(data-magellan-destination='inside')
-            != partial("_inside")
+            article#thingstodo(data-magellan-destination='thingstodo')
+                != partial("_nearby")
 
-        article#bookings(data-magellan-destination='bookings')
-            .row
-                .large-4.column
-                    h3 Bookings
-                .large-8.column
-                    :markdown
-                        Our bookings are managed with
-                        [Stayz.](href='http://www.stayz.com.au/98466')
-                        Got questions? Get in touch by emailing
-                        [Angel](href='mailto:angel@artechne.com.au')
-                        or
-                        [Iona](href='mailto:angel@artechne.com.au').
+            article#inside(data-magellan-destination='inside')
+                != partial("_inside")
 
-                    p.buttonholder
-                        a.Button.Button--contact.Button--highlight(href='http://www.stayz.com.au/98466') Click to Book
+            article#bookings(data-magellan-destination='bookings')
+                .row
+                    .large-4.column
+                        h3 Bookings
+                    .large-8.column
+                        :markdown
+                            Our bookings are managed with
+                            [Stayz.](href='http://www.stayz.com.au/98466')
+                            Got questions? Get in touch by emailing
+                            [Angel](href='mailto:angel@artechne.com.au')
+                            or
+                            [Iona](href='mailto:angel@artechne.com.au').
 
-        article#colophon
-            .row
-                .column
-                    .rule.dark
-                    :markdown
-                        © Artechne 2013. For more information, contact
-                        [Angel Roumelitis.](href='mailto:angel@artechne.com.au')
+                        p.buttonholder
+                            a.Button.Button--contact.Button--highlight(href='http://www.stayz.com.au/98466') Click to Book
 
-                        The Treehouse was designed and built by
-                        [Artechne.](href='http://artechne.com.au')
-                        This website by
-                        [Callum Flack.](href='http://callumflack.com')
+            article#colophon
+                .row
+                    .column
+                        .rule.dark
+                        :markdown
+                            © Artechne 2013. For more information, contact
+                            [Angel Roumelitis.](href='mailto:angel@artechne.com.au')
+
+                            The Treehouse was designed and built by
+                            [Artechne.](href='http://artechne.com.au')
+                            This website by
+                            [Callum Flack.](href='http://callumflack.com')
 

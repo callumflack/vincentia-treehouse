@@ -40,7 +40,7 @@ header {
     .FlexEmbed--ratio:before {
         padding-bottom: 56.25%;
         @media #{$medium-only} { padding-bottom: 78%; }
-        @media #{$small-only}  { padding-bottom: 85%; }
+        @media #{$small-only}  { padding-bottom: 100%; }
     }
 
     /**

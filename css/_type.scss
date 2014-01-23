@@ -153,7 +153,7 @@ h3 {
 
     @media #{$small-only} {
         @include scut-rem-fallback(24);
-        line-height: .8;
+        line-height: 1;
     }
 }
 
