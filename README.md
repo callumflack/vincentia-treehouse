@@ -14,7 +14,7 @@ A marketing &amp; info one-pager made using Harp JS.
 
 ### LATER
 - google map locations
-- harp cms @silentrob?
+- harp editor: https://github.com/silentrob/harp-editor
 
 ### REF
 - https://github.com/briangonzalez/jquery.arbitrary-anchor.js
