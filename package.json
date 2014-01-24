@@ -2,6 +2,15 @@
   "name": "vincentia-treehouse",
   "version": "0.1.0",
   "description": "A marketing & info one-pager made using Harp JS, live on Heroku",
+  "homepage": "http://vincentiatreehouse.herokuapp.com/",
+  "author": {
+    "name": "Callum Flack",
+    "url": "http://callumflack.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:callumflack/vincentia-treehouse.git"
+  },
   "dependencies": {
     "harp": "*"
   },
