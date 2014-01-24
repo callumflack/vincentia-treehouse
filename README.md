@@ -10,7 +10,7 @@ A marketing & info one-pager made using Harp JS.
 ### DEPLOY
 - autoprefixer w/ sublime plugin before deploy
 
-##### GH-PAGES
+###### GH-PAGES
 - Kenneth says: move your existing project into _harp and then compile to the root.
 - https://help.github.com/articles/setting-up-a-custom-domain-with-pages
 
