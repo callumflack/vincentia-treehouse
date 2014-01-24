@@ -23,6 +23,7 @@ A marketing & info one-pager made using Harp JS.
 
 ### REF
 - https://github.com/briangonzalez/jquery.arbitrary-anchor.js
+- destroy skrollr on mobile to prevent Foundation component conflicts: https://github.com/Prinzhorn/skrollr/issues/358 + http://stackoverflow.com/questions/17497020/skrollr-js-turn-off-or-destroy-skrollr-at-a-given-window-width
 
 ### LICENSE
 MIT

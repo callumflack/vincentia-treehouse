@@ -25,13 +25,15 @@ $textMargin: 0 0 .75rem 0;
     color: $cText;
     margin: $textMargin;
 
-    @media #{$small-only} {
-        @include scut-rem-fallback(16);
-    }
 }
 
 
-p, a, li, span { @extend %text; }
+p, a, li, span {
+    @extend %text;
+    @media #{$small-only} {
+        @include scut-rem-fallback(15);
+    }
+}
 
 ul { margin: $textMargin; }
 
@@ -152,6 +154,7 @@ h3 {
     }
 
     @media #{$small-only} {
+        font-family: join($fontMed, $body-font-family);
         @include scut-rem-fallback(24);
         line-height: 1;
     }

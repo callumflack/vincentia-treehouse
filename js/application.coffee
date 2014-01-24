@@ -2,4 +2,6 @@ $ ->
     $(document).foundation()
 
     $(document).ready ->
-        s = skrollr.init()
+        # enable skrollr only beyond mobile
+        windowWidth = $(window).width()
+        skrollr.init forceHeight: false  if windowWidth > 640

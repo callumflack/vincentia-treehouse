@@ -1,8 +1,8 @@
 
-/* ==================================================================   
-   
+/* ==================================================================
+
    HELPERS
-   
+
    ================================================================== */
 
 /**
@@ -35,30 +35,9 @@
 }
 
 /**
- * Simple breakpoint hides
+ * Hide things responsively
  */
 
-// @media (min-width: $screen-md-min) { .hide-desk   { display: none; } }  
-// @media (min-width: $screen-sm-min) { .hide-tablet { display: none; } }
-// @media (max-width: $screen-xs-max) { .hide-mobile { display: none; } }
-
-/**
- * Center
- */
-
-a.center-link { 
-    display: block;
-    padding-bottom: 10px; 
-    text-align: center !important;
+@media #{$small-only} {
+    .hide-mobile { display: none; }
 }
-
-img.center-img {
-    margin: 0 auto;
-}
-
-/**
- * Suit spacer revisions
- */
-
-.u-marginTl { margin-top: 60px !important; }
-.u-marginTm { margin-top: 40px !important; }
