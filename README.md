@@ -18,7 +18,7 @@ A marketing & info one-pager made using Harp JS.
 - git push heroku master
 
 ### LATER
-- google map locations
+- google map locations: https://mapsengine.google.com/map/
 - harp editor: https://github.com/silentrob/harp-editor
 
 ### REF
