@@ -1,4 +1,4 @@
-Vincentia Treehouse
+Vincentia Tree House
 ===================
 
 A marketing & info one-pager made using Harp JS. 
@@ -6,6 +6,7 @@ A marketing & info one-pager made using Harp JS.
 ### TO DO
 - magellan: http://jsfiddle.net/awshout/FF2eR/
 - interaction niceness on scroll: http://pages.github.com/
+- iframe google map on mobile?
 
 ### DEPLOY
 - autoprefixer w/ sublime plugin before deploy
